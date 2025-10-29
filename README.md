@@ -1,11 +1,11 @@
-# 🏠 My Simple Home Lab Infrastructure
+# My Simple Home Lab Infrastructure
 
 This repository documents my home lab setup, which is used for learning networking, virtualization, and server administration.
 
-## 🎯 Primary Goal
+## Primary Goal
 Set up a functional, secure network environment using pfSense as the gateway and Hyper-V for virtual services.
 
-## 💻 Core Hardware Overview (4 Devices)
+## Core Hardware Overview (4 Devices)
 
 | Device | Role | CPU | RAM |
 | :--- | :--- | :--- | :--- |
@@ -16,11 +16,11 @@ Set up a functional, secure network environment using pfSense as the gateway and
 
 ---
 
-## 🗺️ Quick Links
+## Quick Links
 
 * [Network Map and IP Scheme](NETWORK.md)
 * [List of Virtual Services](SERVICES.md)
 
-## ✅ Next Task (From GitHub Project)
+## Next Task (From GitHub Project)
 
 - [ ] Purchase and install a second Network Interface Card (NIC) for the Dell PC.
