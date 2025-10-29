@@ -8,7 +8,7 @@
 
 
 ##[+] Dedicated Physical Services (HP Celeron PC)[/+][-] 
-Dedicated Physical Services (HP Celeron PC)[/-]
+
 | Service Name | Host | IP Address | Purpose |
 | :--- | :--- | :--- | :--- |
 | **Pi-hole DNS** | HP Celeron PC | 192.168.1.11 | Provides network-wide ad-blocking and primary DNS resolution for the LAN. |
