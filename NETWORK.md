@@ -1,4 +1,4 @@
-#[+] Network Configuration & Map[/+][-] Network Configuration & Map[/-]
+# Network Configuration & Map
 ## IP Address Scheme
 | Component | Role | IP Address | Notes |
 | :--- | :--- | :--- | :--- |
