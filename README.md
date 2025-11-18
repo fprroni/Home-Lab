@@ -1,45 +1,45 @@
-# 🏡 Willkommen im Homelab-in-E und Fatjon – Dokumentation der Infrastruktur
+# Willkommen im Homelab-Projekt von Fatjon – Die Infrastruktur-Doku
 
-Dieses Dokument beschreibt die integrierten Dienste und Programme meines Projekts "**Umschulung Fachinformatiker Systemintegration**", die – wie bisher in den Dokumenten aus dem Ordner `Docs` – von Git verwaltet werden (Versionskontrolle mittels Git).
-
----
-
-## 🎯 Ziele der Motivation
-
-Die Hauptziele und die Dokumentation dieses Homelabs, das in einem Git-Repository gespeichert ist, sind nicht darauf beschränkt, "nur zu zeigen", dass ich gut in der IT und vernetzt bin. Stattdessen dienen sie als aktive Lernplattform:
-
-* **Praktisches Lernen:** Der Zweck der Übung ist es, die Konzepte, die ich lerne, nicht nur theoretisch, sondern praktisch anzuwenden.
-* **Vorbereitung auf die Abschlussprüfung:** Sie dient dazu, die Erstellung, Virtualisierung, Verwaltung der Segmentierung (pfSense), Überwachung und Wartung von Systemen zu demonstrieren.
-* **Reflexion:** Das Dokument beschreibt die Herausforderungen und die gefundenen Lösungen während des gesamten Prozesses.
+Dieses Dokument beschreibt die Dienste und Programme, die ich in meinem Projekt zur "**Umschulung zum Fachinformatiker Systemintegration**" integriert habe. Alles wird – genau wie früher die einzelnen Dokumente aus dem `Docs`-Ordner – mit Git versioniert.
 
 ---
 
-## 🏗️ Überblick über die Infrastruktur
+## Warum mache ich das? Die Motivation
 
-Die Infrastruktur ist um die Segmentierung des Datenverkehrs (VLAN) und die Netzwerksicherheit herum aufgebaut. Details zu Topologie und Konfiguration finden Sie in den Abschnitten weiter unten.
+Die Ziele für mein Homelab und die gesamte Doku hier auf Git gehen über ein einfaches "Zeigen, dass ich gut bin" in der IT hinaus. Es ist eine aktive Lernplattform:
+
+* **Echte Praxis:** Es geht darum, das Gelernte nicht nur theoretisch zu verstehen, sondern es sofort praktisch anzuwenden und zu vertiefen.
+* **Fit für die Prüfung:** Ich demonstriere hier die Planung, Virtualisierung, Verwaltung der Netzwerksegmentierung (pfSense), Überwachung und Wartung der Systeme.
+* **Erfahrung teilen:** Das Dokument hält fest, welche Probleme ich hatte und wie ich sie während des Prozesses gelöst habe.
 
 ---
 
-## 💻 Physische Homelab-Geräte (BOM)
+## Aufbau der Infrastruktur
 
-Zur Realisierung des Homelabs habe ich meine Kombination aus vorhandener Hardware genutzt, einschließlich der virtuellen Umgebung der Berufsschule (Hyper-V Remote Lab), sowie eigener Heimcomputer, die jetzt als Layer-2-Switches zur Verkehrssegmentierung dienen.
+Die Basis der Infrastruktur ist die **Segmentierung des Traffics** (VLAN) und die **Netzwerksicherheit**. Details zur gesamten Topologie und Konfiguration finden Sie in den Abschnitten gleich darunter.
 
-### 3.1. Wichtige Geräte für das Netzwerk (Core Infrastructure)
+---
 
-Die folgenden Geräte bilden die Basis für Layer 2 und Layer 3 zur Verkehrssegmentierung.
+## Was ich benutze: Die physische Homelab-Hardware (BOM)
 
-| Gerät | Modell / Typ | Rolle im Homelab | Verbindung / Logik |
+Ich habe mein Homelab aus einem Mix von vorhandener Hardware gebaut. Dazu gehört die virtuelle Umgebung der Berufsschule (Hyper-V Remote Lab) und meine eigenen Computer, die jetzt als Layer-2-Switches für die Traffic-Segmentierung dienen.
+
+### 3.1. Die zentralen Geräte für das Netzwerk (Core-Infrastruktur)
+
+Diese Geräte bilden die Grundlage für Layer 2 und Layer 3 zur Aufteilung des Datenverkehrs.
+
+| Gerät | Modell / Typ | Aufgabe im Homelab | Verbindung / Logik |
 | :--- | :--- | :--- | :--- |
-| **Firewall Dedizierter PC** | **DELL** | **pfSense** (Physische Instanz. Physik. Schnittstellen) \| Kontrolle des Traffics, Inter-VLAN-Routing, Sicherheit (Layer 3) \| Niedriges Niveau (2+ NIC) |
-| **Switch Quadro-Core** | **Switch** (Managed Layer-2-Switch) \| Basis für Segmentierung (Trunk G0/1), Physische Schicht für VLAN- und Switch-Ports \| Niedriges Niveau |
-| **Hypervisor Host** | **Acer Travelmate P216 (16 GB RAM)** \| Workstation-Hypervisor Host für VM-Dienste und Server (z.B. DNS/AD) \| VLAN 30 |
+| **Dedizierter PC (Firewall)** | **DELL** | **pfSense** (Physisch) \| Traffic-Steuerung, Inter-VLAN-Routing, Sicherheit (Layer 3) \| Niedriges Niveau (2+ NICs) |
+| **Switch Quadro-Core** | **Managed Layer-2-Switch** | Basis-Segmentierung (Trunk G0/1), physische VLANs \| Layer 2 |
+| **Hypervisor Host** | **Acer Travelmate P216 (16 GB RAM)** | Workstation-Host für VMs und Dienste (z.B. DNS/AD) \| VLAN 30 |
 
-### 3.2. Test-Client-Geräte
+### 3.2. Test-Clients
 
-Die folgenden Geräte werden verwendet, um Endbenutzer zu simulieren und die implementierten pfSense-Firewall-Regeln zu testen:
+Diese Geräte dienen dazu, die Endbenutzer nachzubilden und die Regeln, die ich in der pfSense-Firewall eingestellt habe, zu testen:
 
-| Gerät | Betriebssystem | Spezifische Hauptmerkmale | Rolle im Test |
+| Gerät | Betriebssystem | Spezielle Merkmale | Rolle im Test |
 | :--- | :--- | :--- | :--- |
 | **Client A** (Admin) | **Windows 11 Pro** \| I5-1335U, 16 GB RAM \| Verwaltung \| Routing / Admin-Workstation (VLAN 30) |
 | **Client B** | **Windows 8.1 Pro** \| Celeron N3050, 4 GB RAM \| **Standard-Client** (VLAN 40) |
-| **Client C** | **OS X El Capitan** \| Core i7, 4 GB RAM \| **Client** \| **Verbunden** / **Test** der Kompatibilität mit Mac OS X |
+| **Client C** | **OS X El Capitan** \| Core i7, 4 GB RAM \| **Client** \| **Verbindungstest** / Kompatibilität mit Mac OS X |
