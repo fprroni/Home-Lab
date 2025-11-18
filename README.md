@@ -70,7 +70,7 @@ Dafür musste eine Netzwerkkarte (NIC) mit mehreren Ports in den freien PCI-e-Sl
 ##### A. Fotos der NIC vor dem Einbau
 
 ![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](./images/nic_para_montimit.jpg) Abb. 4.1: Die neue Netzwerkkarte (NIC) mit mehreren Ports, notwendig für pfSense (WAN/LAN).
- ![Image](https://github.com/user-attachments/assets/f7836a5a-7ee8-47a5-aa5d-900e98ffebda)
+ <img src="https://github.com/user-attachments/assets/f7836a5a-7ee8-47a5-aa5d-900e98ffebda" width="300" alt="Përshkrim i imazhit" />
 
 ![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](HomeLab Images )
 *Abb. 4.1: Die neue Netzwerkkarte (NIC) mit mehreren Ports, notwendig für pfSense (WAN/LAN).*
