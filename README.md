@@ -85,3 +85,8 @@ Dafür musste eine Netzwerkkarte (NIC) mit mehreren Ports in den freien PCI-e-Sl
 Nach der Hardware-Installation wurde das Betriebssystem pfSense direkt auf der Festplatte des Dell-Geräts installiert.
 
 **Rolle des Dell-Geräts:** Das Gerät fungiert nun als **dedizierte Firewall / Router** (Layer 3) für die gesamte Infrastruktur und verwaltet den Verkehr zwischen allen VLANs.
+
+
+
+
+Kali linux dhe Wireshark
