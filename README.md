@@ -69,8 +69,7 @@ Dafür musste eine Netzwerkkarte (NIC) mit mehreren Ports in den freien PCI-e-Sl
 
 ##### A. Fotos der NIC vor dem Einbau
 
-![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](<img width="802" height="521" alt="image" src="https://github.com/user-attachments/assets/6eb2c05a-dc31-44c7-a922-7a1b5e670704" />
- )
+![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](HomeLab Images )
 *Abb. 4.1: Die neue Netzwerkkarte (NIC) mit mehreren Ports, notwendig für pfSense (WAN/LAN).*
 
 ##### B. Foto vom Einbau der NIC im Dell
