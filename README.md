@@ -57,7 +57,7 @@ Ein kritischer Schritt beim Aufbau des Homelabs war die Sicherstellung der notwe
 
 ### 4.1. Kauf und Einbau der Netzwerkkarte (NIC) mit mehreren Ports
 
-Das Dell-Gerät (oder jedes andere Gerät) benötigt mehrere physische Ports, um den Traffic effektiv verwalten zu können: einen für die **WAN**-Verbindung (Internet) und mindestens einen weiteren für die **TRUNK/LAN**-Verbindung (zum Switch im Quendron).
+Das Dell-Gerät (oder jedes andere Gerät) benötigt mehrere physische Ports, um den Traffic effektiv verwalten zu können: einen für die **WAN**-Verbindung (Internet) und mindestens einen weiteren für die **TRUNK/LAN**-Verbindung zum Cisco managed Switch (Layer2).
 
 Dafür musste eine Netzwerkkarte (NIC) mit mehreren Ports in den freien PCI-e-Slot des Dell-Geräts eingebaut werden.
 
@@ -69,7 +69,8 @@ Dafür musste eine Netzwerkkarte (NIC) mit mehreren Ports in den freien PCI-e-Sl
 
 ##### A. Fotos der NIC vor dem Einbau
 
-![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](./images/nic_para_montimit.jpg)
+![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](![image3](https://github.com/user-attachments/assets/b361c869-47e8-4e65-8f32-b5d81e53774f)
+ )
 *Abb. 4.1: Die neue Netzwerkkarte (NIC) mit mehreren Ports, notwendig für pfSense (WAN/LAN).*
 
 ##### B. Foto vom Einbau der NIC im Dell
