@@ -1,18 +1,22 @@
-# Willkommen im Homelab-Projekt von Fatjon – Die Infrastruktur-Doku
+# Willkommen im HomeLab-Projekt von Fatjon Prroni
 
-Dieses Dokument beschreibt die Dienste und Programme, die ich in meinem Projekt zur "**Umschulung zum Fachinformatiker Systemintegration**" integriert habe. Alles wird – genau wie früher die einzelnen Dokumente aus dem `Docs`-Ordner – mit Git versioniert.
-
+Dieses Dokument beschreibt die Dienste und Programme, die ich in meinem Projekt zur "**Umschulung zum Fachinformatiker Systemintegration**" integriert habe.
 ---
 
-## Warum mache ich das? Die Motivation
+## Warum mache ich das?
 
-Die Ziele für mein Homelab und die gesamte Doku hier auf Git gehen über ein einfaches "Zeigen, dass ich gut bin" in der IT hinaus. Es ist eine aktive Lernplattform:
+## 🎯 Warum mache ich das? Die Motivation und der Status
 
-* **Echte Praxis:** Es geht darum, das Gelernte nicht nur theoretisch zu verstehen, sondern es sofort praktisch anzuwenden und zu vertiefen.
-* **Fit für die Prüfung:** Ich demonstriere hier die Planung, Virtualisierung, Verwaltung der Netzwerksegmentierung (pfSense), Überwachung und Wartung der Systeme.
-* **Erfahrung teilen:** Das Dokument hält fest, welche Probleme ich hatte und wie ich sie während des Prozesses gelöst habe.
+## 🎯 Warum mache ich das? Die Motivation und der Status
 
----
+Mein Homelab-Projekt und die Doku hier auf Git sollen mehr sein, als nur zu zeigen, was ich in der IT kann. Es ist eine Plattform, auf der ich aktiv lerne:
+
+* **Praxis vor Theorie:** Hier wende ich alles, was ich in der Schule lerne, **direkt in der Praxis an**. Das hilft mir, mein Wissen zu vertiefen und meine Fähigkeit, **Probleme in echten Projekten zu lösen (Troubleshooting-Skills)**, zu verbessern.
+* **Vorbereitung auf die Prüfung:** Durch die Planung, Virtualisierung, das Management der Netzwerk-Trennung (pfSense) und die Wartung der Systeme bereite ich mich konkret auf die **Abschlussprüfung** vor.
+* **Lektionen teilen:** Ich dokumentiere hier auch, welche Schwierigkeiten ich hatte und wie ich die passenden Lösungen dafür gefunden habe.
+
+**Status:** Das Projekt ist **noch nicht fertig**. Ich werde es über die nächsten Wochen und Monate stetig erweitern und neue Themen und Inhalte aus dem Schulunterricht hinzufügen.
+
 
 ## Aufbau der Infrastruktur
 
