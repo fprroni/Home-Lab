@@ -48,3 +48,37 @@ Diese Geräte dienen dazu, die Endbenutzer nachzubilden und die Regeln, die ich 
 | **Client A** (Admin) | **Windows 11 Pro** \| I5-1335U, 16 GB RAM \| Verwaltung \| Routing / Admin-Workstation (VLAN 30) |
 | **Client B** | **Windows 8.1 Pro** \| Celeron N3050, 4 GB RAM \| **Standard-Client** (VLAN 40) |
 | **Client C** | **OS X El Capitan** \| Core i7, 4 GB RAM \| **Client** \| **Verbindungstest** / Kompatibilität mit Mac OS X |
+
+
+
+## 4. Implementierung der Infrastruktur: Vorbereitung der physischen Firewall
+
+Ein kritischer Schritt beim Aufbau des Homelabs war die Sicherstellung der notwendigen Netzwerkkapazität durch ein dediziertes Firewall-Gerät. Dafür wurde ein **Dell**-Computer als Host für pfSense genutzt.
+
+### 4.1. Kauf und Einbau der Netzwerkkarte (NIC) mit mehreren Ports
+
+Das Dell-Gerät (oder jedes andere Gerät) benötigt mehrere physische Ports, um den Traffic effektiv verwalten zu können: einen für die **WAN**-Verbindung (Internet) und mindestens einen weiteren für die **TRUNK/LAN**-Verbindung (zum Switch im Quendron).
+
+Dafür musste eine Netzwerkkarte (NIC) mit mehreren Ports in den freien PCI-e-Slot des Dell-Geräts eingebaut werden.
+
+**Ziel:** Die physische Trennung des WAN-Traffics vom internen Netzwerk-Traffic (LAN/VLAN) sicherstellen.
+
+#### Dokumentation der Installation
+
+**Hinweis:** Bitte stellen Sie sicher, dass die Bilder `nic_para_montimit.jpg` und `nic_instalimi.jpg` im Ordner `./images/` in Ihrem Git-Repository gespeichert sind.
+
+##### A. Fotos der NIC vor dem Einbau
+
+![NIC-Karte mit mehreren Ports für pfSense WAN/LAN](./images/nic_para_montimit.jpg)
+*Abb. 4.1: Die neue Netzwerkkarte (NIC) mit mehreren Ports, notwendig für pfSense (WAN/LAN).*
+
+##### B. Foto vom Einbau der NIC im Dell
+
+![Einbau der NIC in den PCI-e-Slot des Dell-Geräts](./images/nic_instalimi.jpg)
+*Abb. 4.2: Die NIC wurde erfolgreich in das Dell-Gerät eingebaut und ist bereit für die pfSense-Konfiguration.*
+
+### 4.2. Erstinstallation und Konfiguration von pfSense
+
+Nach der Hardware-Installation wurde das Betriebssystem pfSense direkt auf der Festplatte des Dell-Geräts installiert.
+
+**Rolle des Dell-Geräts:** Das Gerät fungiert nun als **dedizierte Firewall / Router** (Layer 3) für die gesamte Infrastruktur und verwaltet den Verkehr zwischen allen VLANs.
