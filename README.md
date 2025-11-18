@@ -1,5 +1,5 @@
 **FATJON Prroni** | Fachinformatiker Systemintegration (Umschulung) 
-**Kontakti:** Tel: +4915209017791 | Email: fatjonprroni@email.com <<img width="882" height="66" alt="image" src="https://github.com/user-attachments/assets/891b6ecf-9f50-4bf3-9875-213ff41eadfa" />
+Tel: +4915209017791 | Email: fatjonprroni@email.com
 
 
 
